@@ -1,0 +1,20 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+	{% for post in object_list %}
+
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+            	<span class="w3-right w3-opacity">{{post.date|date:"d-m-Y"}}</span>
+              <a href="/news/{{post.id}}"><h3>{{post.title}}</h3></a>
+              <p class="">{{post.content}}</p>
+              
+
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i> {{ post.author }}</button> 
+            </div>
+          </div>
+
+
+      <br>
+      {% endfor %}
+{% endblock %}

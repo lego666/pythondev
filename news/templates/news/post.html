@@ -1,0 +1,15 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+	<div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <span class="w3-right w3-opacity">{{articles.date|date:"Y-m-d в H:i:s"}}</span>
+        <h4>{{articles.title}}</h4>
+        <h6 class="text-info">Опубликовано: {{articles.date|date:"Y-m-d в H:i:s"}}</h6>
+        <hr class="w3-clear">
+        <p>{{articles.post|safe|linebreaks}}</p>
+          <div class="w3-row-padding" style="margin:0 -16px">
+        </div>
+        <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  Нравится</button> 
+        <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Комментарий</button> 
+      </div>
+{% endblock %}
